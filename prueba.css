@@ -1,0 +1,495 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+
+/*.top{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 1.688rem;
+    background-color: #201c24;
+}
+
+.top h1{
+    font-size: 0.9rem;
+    color: #949ba4;
+    padding-left: 0.8rem;
+}*/
+
+.content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.servers{
+    display: flex;
+    flex-direction: column;
+    background-color: #201c24;
+    width: 6rem;
+    height: 100%;
+    align-items: center;
+}
+
+.direct-message{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 48px;
+    width: 50px;
+    background-color: #5865f2;
+    border-radius: 30%;
+    position: relative;
+    margin-bottom: 5px;
+    margin-top: 0.5rem;
+}
+
+.direct-message:after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #949ba4;
+    left: 20%;
+    bottom: -20%;
+    position: absolute;
+}
+
+.direct-message img{
+    height: 30px;
+    width: 30px;
+    filter: invert(100%);
+}
+
+.server, .add, .explore{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: #313338;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.add span, .explore span{
+    color: green;
+}
+
+.server span{
+    font-size: 1.2rem;
+    color: #d6d9dc;
+}
+
+
+.chats{
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    position: relative;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #2b2d31;
+    height: 3.5rem;
+    border-bottom: 2px solid #222326;
+}
+
+input{
+    height: 2rem;
+    width: 90%;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #1e1f22;
+    text-align: center;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 1rem;
+    height: 2.60rem;
+    width: 90%;
+    margin-top: 0.4rem;
+    border-radius: 5px;
+    border-style: none;
+    color: #949ba4;
+    cursor: pointer;
+}
+
+.icon h1{
+    padding-left: 0.8rem;
+    font-size: 1rem;
+}
+
+.icon:hover{
+    background-color: #48444c;
+    color: #dbdee1;
+}
+
+.friends{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden scroll;
+    background-color: #2b2d31;
+    height: 100%;
+}
+
+.friends::-webkit-scrollbar, .activity-now::-webkit-scrollbar{
+    width: 0.3rem;
+    background-color: transparent;
+}
+
+.connected-friends::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: transparent;
+}
+
+.friends::-webkit-scrollbar-thumb, .connected-friends::-webkit-scrollbar-thumb, .activity-now::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.5);   
+    border-radius: 5px;
+}
+
+.messages-text{
+    margin-top: 1rem;
+    height: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+}
+
+.messages-text span{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.messages-text h1, span{
+    font-size: 0.7rem;
+    color: #949ba4;
+}
+
+.friend, .connected-friend{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 85%;
+    padding-left: 0.2rem;
+    color: #949ba4;
+
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+}
+
+.friend:hover{
+    background-color: #36373d;
+    border-radius: 5px;
+    border-style: none;
+    color: #d8dce0;
+}
+
+.friend img, .user img, .connected-friend img, .activity img{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #313338;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 0.2rem;
+}
+
+.friend h1{
+    justify-self: space-around;
+    padding-left: 0.8rem;
+    font-size: 1rem;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    padding-left: 0.2rem;
+    color: #eaebed;
+    background-color: #232428;
+    border-top: 2px solid #37393f;
+    height: 4.25rem;
+}
+
+.mini-profile{
+    display: flex;
+    justify-content: left;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+}
+
+.mini-profile:hover{
+    background-color: #3d3e45;
+    cursor: pointer;
+}
+
+.icons-user{
+    display: flex;
+    margin-left: auto;
+    margin-right: 0.8rem;
+}
+
+.material-symbols-outlined.md-24 { font-size: 22px; }
+.material-symbols-outlined.md-18 { font-size: 18px; }
+
+.icons-user span{
+    padding: 0.4rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.icons-user span:hover{
+    background-color: #3d3e45;
+    cursor: pointer;
+}
+
+.user h1{
+    justify-self: space-around;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.texting{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #313338;
+}
+
+.texting-options{
+    display: flex;
+    border-bottom: 2px solid #222326;
+    height: 3rem;
+}
+
+.texting-icon{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    padding-left: 1.5rem;
+    height: 3rem;
+    width: auto;
+    color: #eaebed;
+}
+
+.texting-icon:before{
+    content: "";
+    display: block;
+    width: 0.14rem;
+    height: 1rem;
+    background: #3f4147;
+    left: 115%;
+    position: absolute;
+}
+
+.texting-icon h1, .texting-op h1, .texting-add-friend h1{
+    margin: 0;
+    position: relative;
+    padding: 0.4rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.texting-icons{
+    margin-left: auto;
+    align-self: center;
+}
+
+.texting-icons span{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+
+.texting-op, .texting-add-friend{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 2.5rem;
+    gap: 2rem;
+    height: 3rem;
+    width: auto;
+    color: #949ba4;
+}
+
+.texting-op h1:hover{
+    background-color: #3d3e45;
+    cursor: pointer;
+    color: #eaebed;
+}
+
+.texting-add-friend h1{
+    position: relative;
+    padding: 0.2rem;
+    background-color: #248046;
+    cursor: pointer;
+    color: #d8dce0;
+}
+
+.texting-friends{
+    display: flex;
+}
+
+.friends-viewing{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 56rem;
+    padding: 1rem;
+    height: 44rem; /* Set a fixed height for the scrolling container */
+    border-right: 2px solid #37393f;
+}
+
+.friends-viewing h1{
+    padding-top: 0.7rem;
+    font-size: 0.7rem;
+    padding-bottom: 0.7rem;
+    color: #eaebed;
+}
+
+.top-f{
+    display: flex;
+    flex-direction: column;
+}
+
+.connected-friends{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-top: 0.1rem;
+    position: relative;
+}
+
+.connected-friend{
+    border-top: 2px solid #37393f;
+    width: 52rem;
+}
+
+.texting-text{
+    margin-left: 0.8rem;
+}
+
+.texting-text h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 0.7rem;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+}
+
+.texting-text h1:nth-child(2), .activity-friend-text h1:nth-child(2){
+    color: #949ba4;
+}
+
+.icons-friends{
+    display: flex;
+    margin-left: auto;
+}
+
+.icons-friends span{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #2b2d31;
+    border-radius: 50%;
+    position: relative;
+    margin: 0.5rem;
+}
+
+.connected-friend:hover{
+    background-color: #3d3e45;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.activity-now{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: scroll;
+    height: 43rem;
+}
+
+.activity-now h1{
+    font-size: 1.2rem;
+    color: #eaebed;
+}
+
+.activity{
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #2b2d31;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.activity:hover{
+    background-color: #111214;
+    cursor: pointer;
+}
+
+.activity-friend-text h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 0.7rem;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+
+::placeholder{
+    color: #949ba4;
+    font-size: 0.8rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .content{
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .server, .add, .explore{
+        height: 45px;
+        width: 45px;
+    }
+
+    .activity-friend-text h1{
+        height: 3rem;
+    }
+
+    .activity-friend-text{
+        display: flex;
+    }
+}
